@@ -12,13 +12,24 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false,
-          }}
-        >
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Meeting" component={MeetingRoom} />
+        <Stack.Navigator>
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Home"
+            component={Home}
+          />
+          <Stack.Screen
+            options={{
+              title: "Start a Meeting",
+              headerStyle: {
+                backgroundColor: "#1c1c1c",
+                shadowOpacity: 0,
+              },
+              headerTintColor: "white",
+            }}
+            name="Meeting"
+            component={MeetingRoom}
+          />
         </Stack.Navigator>
       </NavigationContainer>
       {/* <Home /> */}
