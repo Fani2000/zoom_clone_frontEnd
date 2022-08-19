@@ -28,7 +28,7 @@ const ContactsMenu = () => {
   return (
     <View style={styles.container}>
       {users.map((user) => (
-        <TouchableOpacity>
+        <TouchableOpacity key={user.id}>
           <View id={user.id} style={styles.row}>
             <View style={styles.starredIcon}>
               {user.type === "starred" ? (

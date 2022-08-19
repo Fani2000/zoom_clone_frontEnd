@@ -1,5 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 const items = [
@@ -8,6 +9,7 @@ const items = [
     name: "video-camera",
     title: "New Meeting",
     color: "#FF751F",
+    type: "meeting",
   },
   {
     id: 2,
@@ -30,6 +32,15 @@ const items = [
 ];
 
 const MenuButtons = () => {
+  const navigation = useNavigation();
+
+  const handlePress = (item) => {
+    // console.log(item);
+    if (item.type === "meeting") {
+      navigation.navigate({ name: "Meeting" });
+    }
+  };
+
   return (
     <View
       style={{
@@ -46,6 +57,7 @@ const MenuButtons = () => {
             style={{ flexDirection: "column", alignItems: "center" }}
           >
             <TouchableOpacity
+              onPress={() => handlePress(item)}
               style={{
                 backgroundColor: item.color,
                 padding: 10,
