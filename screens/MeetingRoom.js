@@ -15,7 +15,14 @@ const MeetingRoom = () => {
 
   return (
     <SafeAreaView style={{ height: "100%" }}>
-      <View style={{ backgroundColor: "#1c1c1c", flex: 1 }}>
+      <View
+        style={{
+          backgroundColor: "#1c1c1c",
+          flex: 1,
+          paddingHorizontal: 10,
+          paddingTop: 10,
+        }}
+      >
         {/* <Text>Meeting Screen</Text> */}
 
         <View
