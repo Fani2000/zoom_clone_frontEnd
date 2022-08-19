@@ -7,25 +7,25 @@ const items = [
     id: 1,
     name: "video-camera",
     title: "New Meeting",
-    color: "orange",
+    color: "#FF751F",
   },
   {
     id: 2,
     name: "plus-square",
     title: "Join",
-    color: "blue",
+    color: "#0470DC",
   },
   {
     id: 3,
     name: "calendar",
     title: "Schedule",
-    color: "blue",
+    color: "#0470DC",
   },
   {
     id: 4,
     name: "upload",
     title: "Share Screen",
-    color: "blue",
+    color: "#0470DC",
   },
 ];
 
